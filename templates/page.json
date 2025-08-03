@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "banner_custom_PQBhEQ": {
+      "type": "banner-custom",
+      "settings": {
+        "heading_text": "TISSO VISON",
+        "paragraph_text": "Find the ideal gift for your loved ones",
+        "button_text": "CHOOSE GIFT",
+        "heading_text_two": "The Gift Guide",
+        "main_description": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.",
+        "main_button_text": "SHOP NOW",
+        "bottom_bar_text": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
+      }
+    },
+    "product_grid_section_DXDdTD": {
+      "type": "product-grid-section",
+      "settings": {
+        "product_1": "silk-summer-top",
+        "product_2": "blue-silk-tuxedo",
+        "product_3": "dark-winter-jacket",
+        "product_4": "classic-varsity-top",
+        "product_5": "ocean-blue-shirt",
+        "product_6": "striped-skirt-and-top"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "banner_custom_PQBhEQ",
+    "product_grid_section_DXDdTD"
+  ]
+}

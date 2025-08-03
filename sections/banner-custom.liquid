@@ -1,0 +1,547 @@
+<!-- --------- Top bar and Image --------- -->
+
+<div class="main-container">
+  <img
+    src="https://cdn.shopify.com/s/files/1/0879/9495/8105/files/Frame.svg?v=1716061336"
+    alt=""
+    width="1350"
+    height="500"
+  >
+
+  <div class="top-bar" id="top-bar">
+    <span class="menu-icon" id="menu-icon">&#9776;</span>
+    <h2 id="bar-title">{{ section.settings.heading_text }}</h2>
+    <p id="center-text">{{ section.settings.paragraph_text }}</p>
+    <button id="right-button">
+      {{ section.settings.button_text }}
+      <i class="fa-solid fa-arrow-right-long"></i>
+    </button>
+  </div>
+  <div class="dropdown-content" id="dropdown-content">
+    <div class="dropdown-box">
+      <span class="close-icon" id="close-icon">&#10005;</span>
+      <h2>{{ section.settings.heading_text }}</h2>
+    </div>
+    <p>{{ section.settings.paragraph_text }}</p>
+    <button>
+      {{ section.settings.button_text -}}
+      <i class="fa-solid fa-arrow-right-long"></i>
+    </button>
+  </div>
+
+  <!-- -------- 2nd Image --- Text --- Bottom bar ------------- -->
+
+  <div class="main-wrapper">
+    <div class="content-wrap-main">
+      <div class="content-wrap">
+        <h1>{{ section.settings.heading_text_two }}</h1>
+        <p>
+          {{ section.settings.main_description }}
+        </p>
+        <button>
+          {{ section.settings.main_button_text }}
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+      </div>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0879/9495/8105/files/Frame.svg?v=1716061336"
+        alt=""
+        width="1350"
+        height="800"
+      >
+    </div>
+    <div class="bottom-bar">{{ section.settings.bottom_bar_text }}</div>
+  </div>
+</div>
+
+<style>
+     .top-bar {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         height: 64px;
+         width: 100%;
+         background-color: #F5F5F5;
+         color: white;
+         padding: 0 30px;
+         box-sizing: border-box;
+         position: absolute;
+         top: 0;
+     }
+
+     .top-bar h2 {
+         margin: 0;
+         color: #000000;
+         font-weight: 500;
+         font-size: 26px;
+         font-family: Jost;
+     }
+
+     .top-bar p {
+         margin: 0;
+         color: #000000;
+         font-weight: 400;
+         font-size: 16px;
+         font-family: Jost;
+     }
+
+     .top-bar button {
+         position: relative;
+         display: inline-block;
+         padding: 15px 30px;
+         font-weight: 400;
+         font-size: 16px;
+         font-family: Jost;
+         color: #000000;
+         background-color: #FFF544;
+         cursor: pointer;
+         overflow: hidden;
+         transition: color 0.4s, border-color 0.4s;
+         z-index: 1;
+         border: none;
+     }
+
+     .top-bar button::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: #000000;
+         z-index: -1;
+         transform: translateX(-100%);
+         transition: transform 0.2s ease-in-out;
+     }
+
+     .top-bar button:hover::before {
+         transform: translateX(0);
+     }
+
+     .top-bar button:hover {
+         color: #FFFFFF;
+         border: none;
+     }
+
+     .top-bar .fa-arrow-right-long {
+         padding-left: 15px;
+     }
+
+     .menu-icon {
+         display: none;
+         font-size: 1.5em;
+         cursor: pointer;
+         color: #000000;
+     }
+
+     .dropdown-content {
+         display: none;
+         flex-direction: column;
+         align-items: center;
+         background-color: #F5F5F5;
+         width: 100%;
+         padding: 20px;
+         box-sizing: border-box;
+         position: absolute;
+         top: 70px;
+         z-index: 10;
+         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+     }
+
+     .dropdown-content p .dropdown-content button {
+         width: 100%;
+         text-align: center;
+         margin: 10px 0;
+         padding: 10px;
+         color: black;
+     }
+
+     .dropdown-content button {
+         text-align: center;
+         margin: 10px 0;
+         background-color: #FFF544;
+       font-weight: 400;
+         color: #000000;
+         border: none;
+         padding: 13px 30px;
+         font-size: 16px;
+         cursor: pointer;
+     }
+   .dropdown-content .fa-arrow-right-long {
+         padding-left: 15px;
+     }
+
+     .dropdown-content h2 {
+         color: #000000;
+         font-weight: 500;
+         font-size: 22px;
+         font-family: Jost;
+     }
+
+     .dropdown-content p {
+         color: #000000;
+         font-weight: 400;
+         font-size: 16px;
+         font-family: Jost;
+     }
+
+     .dropdown-box {
+         width: calc(100% - 40px);
+         background-color: #efefef;
+         color: black;
+         margin-bottom: 10px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         box-sizing: border-box;
+         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+         position: relative;
+     }
+
+     .close-icon {
+         position: absolute;
+         left: 10px;
+         cursor: pointer;
+       color: #000000;
+     font-weight: bold;
+     font-size: 20px;
+     }
+
+     .main-container {
+         position: relative;
+     }
+
+     .main-container img {
+         position: relative;
+         top: -80px;
+         width: 100%;
+         height: auto;
+     }
+
+     .main-wrapper {
+         position: relative;
+         top: -85px;
+         overflow: hidden;
+     }
+
+     .main-wrapper .content-wrap-main {
+         display: flex;
+         justify-content: space-between;
+        position: relative;
+     }
+
+     .content-wrap {
+         display: inline;
+         overflow: hidden;
+         width: 500px;
+         padding-left: 60px;
+         padding-bottom: 50px;
+     }
+
+     .content-wrap h1 {
+      font-weight: 500;
+         font-size: 65px;
+         font-family: Jost;
+         margin: 0;
+     }
+
+     .content-wrap p {
+         font-size: 20px;
+         line-height: 28px;
+         color: #000000;
+         font-weight: 400;
+         font-family: Jost;
+
+     }
+
+     .content-wrap button .fa-arrow-right-long {
+         padding-left: 15px;
+     }
+
+     .content-wrap button {
+         position: relative;
+         display: inline-block;
+         padding: 15px 30px;
+         font-weight: 400;
+         font-size: 16px;
+         font-family: Jost;
+         color: #FFFFFF;
+         background-color: #000000;
+         cursor: pointer;
+         overflow: hidden;
+         transition: color 0.4s, border-color 0.4s;
+         z-index: 1;
+         border: none;
+     }
+
+     .content-wrap button::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: #FFF544;
+         z-index: -1;
+         transform: translateX(-100%);
+         transition: transform 0.2s ease-in-out;
+     }
+
+     .content-wrap button:hover::before {
+         transform: translateX(0);
+     }
+
+     .content-wrap button:hover {
+         color: #000000;
+         border: none;
+     }
+
+     .content-wrap-main img {
+         position: absolute;
+         left: 500px;
+         top: -18px;
+         width: 100%;
+         height: auto;
+     }
+
+     .bottom-bar {
+         position: relative;
+         background-color: #F5F5F5;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 10px 50px 10px 50px;
+         font-size: 20px;
+         line-height: 13.42px;
+         color: #000000;
+         font-weight: 400;
+         font-size: 16px;
+         font-family: Jost;
+     }
+
+     /*------------- MEDIA QUERIES -----------------*/
+
+     @media (max-width: 750px) {
+         .top-bar {
+             padding: 0 10px;
+             justify-content: space-between;
+         }
+         .top-bar h2 {
+             position: absolute;
+             left: 50%;
+             transform: translateX(-50%);
+         }
+         .top-bar p, .top-bar button {
+             display: none;
+         }
+         .menu-icon {
+             display: block;
+         }
+         .top-bar.show-menu p, .top-bar.show-menu button {
+             display: none;
+         }
+
+         .main-wrapper {
+             position: relative;
+             overflow: hidden;
+             top: 0;
+             height: auto;
+         }
+         .main-container img {
+             display: none;
+         }
+         .content-wrap-main img {
+             display: block;
+             position: relative;
+             left: 0;
+             width: 900px;
+             height: auto;
+         }
+         .main-wrapper .content-wrap-main {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+         }
+         .top-bar {
+             position: relative;
+         }
+         .content-wrap h1 {
+             font-size: 48px;
+         }
+         .content-wrap {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             padding: 50px 50px;
+             overflow: hidden;
+         }
+         .content-wrap p {
+             font-size: 14px;
+             max-width: 90%;
+             text-align: center;
+           padding-left: 20px;
+        padding-right: 20px;
+         }
+
+    .content-wrap button {
+        position: absolute;
+        top: 80%; /* Adjust as needed to place the button vertically */
+        left: 50%; /* Center the button horizontally */
+        transform: translate(-50%, -50%); /* Center the button perfectly */
+        z-index: 2; /* Ensure the button appears above other elements */
+        padding: 15px 30px;
+        font-weight: 400;
+        font-size: 16px;
+        font-family: Jost;
+        color: #FFFFFF;
+        background-color: #000000;
+        cursor: pointer;
+        overflow: hidden;
+        transition: color 0.4s, border-color 0.4s;
+        border: none;
+    }
+
+    .content-wrap button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #FFF544;
+        z-index: -1;
+        transform: translateX(-100%);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .content-wrap button:hover::before {
+        transform: translateX(0);
+    }
+
+    .content-wrap button:hover {
+        color: #000000;
+        border: none;
+    }
+
+
+     }
+
+     @media (max-width: 1080px) {
+         .top-bar h2 {
+             font-size: 22px;
+         }
+         .top-bar p {
+             font-size: 14px;
+             padding-right: 50px;
+         }
+         .top-bar button {
+             font-size: 16px;
+             padding: 13px 25px;
+         }
+     }
+
+     @media (max-width: 500px) {
+         .content-wrap p {
+             font-size: 12px;
+             /* word-break: break-all; */
+         }
+         .content-wrap h1 {
+             font-size: 42px;
+         }
+         .bottom-bar {
+             font-size: 14px;
+
+         }
+     }
+
+     @media (max-width: 590px) {
+         .bottom-bar {
+             font-size: 14px;
+           padding: 10px 30px 10px 30px;
+
+         }
+     }
+
+  @media (max-width: 430px) {
+
+     .bottom-bar {
+             font-size: 10px;
+       padding: 10px 20px 10px 20px ;
+         }
+
+    .content-wrap button {
+    padding: 15px 25px;
+  }
+</style>
+
+<script>
+  document.getElementById('menu-icon').addEventListener('click', function() {
+      let dropdownContent = document.getElementById('dropdown-content');
+      dropdownContent.style.display = 'flex';
+  });
+
+  document.getElementById('close-icon').addEventListener('click', function() {
+      let dropdownContent = document.getElementById('dropdown-content');
+      dropdownContent.style.display = 'none';
+  });
+
+  window.addEventListener('load', updateLayout);
+</script>
+
+{% schema %}
+{
+  "name": "Banner-custom",
+  "settings": [
+      {
+          "type": "text",
+          "id": "heading_text",
+          "default": "Logo Text",
+          "label": "Heading"
+      },
+      {
+          "type": "text",
+          "id": "paragraph_text",
+          "default": "Lorem ipsum dolor sit amet.",
+          "label": "Paragraph Text"
+      },
+      {
+          "type": "text",
+          "id": "button_text",
+          "default": "Button Text",
+          "label": "Button Text"
+      },
+      {
+          "type": "text",
+          "id": "heading_text_two",
+          "default": "Heading Text",
+          "label": "Main Heading Text"
+      },
+        {
+          "type": "inline_richtext",
+          "id": "main_description",
+          "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, a minima. Iure cum, rerum suscipit labore natus illum. Doloremque, assumenda?",
+          "label": "Main_Description Text"
+        },
+        {
+          "type": "text",
+          "id": "main_button_text",
+          "default": "Button Text",
+          "label": "Button Heading"
+      },
+       {
+          "type": "inline_richtext",
+          "id": "bottom_bar_text",
+          "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          "label": "Bottom Bar Text"
+      }
+
+  ],
+  "presets": [
+    {
+      "name": "Banner-custom"
+    }
+  ]
+}
+{% endschema %}
