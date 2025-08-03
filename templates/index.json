@@ -15,7 +15,7 @@
       "settings": {
         "image": "shopify://shop_images/Frame_1.png",
         "image_overlay_opacity": 0,
-        "image_height": "small",
+        "image_height": "adapt",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
@@ -62,10 +62,10 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Frame.png",
-        "image_2": "shopify://shop_images/Frame_1.png",
+        "image_2": "shopify://shop_images/Frame.png",
         "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
+        "image_height": "adapt",
+        "desktop_content_position": "top-left",
         "show_text_box": true,
         "desktop_content_alignment": "left",
         "color_scheme": "scheme-1",
