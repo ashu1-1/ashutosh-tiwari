@@ -88,11 +88,24 @@
         "product_5": "soursop-1",
         "product_6": "the-multi-location-snowboard"
       }
+    },
+    "product_grid_section_MW6Dyi": {
+      "type": "product-grid-section",
+      "name": "Product grid section",
+      "settings": {
+        "product_1": "black-leather-bag",
+        "product_2": "blue-silk-tuxedo",
+        "product_3": "chequered-red-shirt",
+        "product_4": "classic-leather-jacket",
+        "product_5": "classic-varsity-top",
+        "product_6": "dark-denim-top"
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "product_grid_section_VP6Njq"
+    "product_grid_section_VP6Njq",
+    "product_grid_section_MW6Dyi"
   ]
 }
